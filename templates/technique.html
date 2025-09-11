@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="technique-content">
+    <h1>{{ technique.title }}</h1>
+    
+    <!-- Фильтр 'safe' нужен, чтобы HTML-теги из markdown-файла (h3, p, strong) отображались корректно -->
+    {{ technique.content | safe }}
+
+    <!-- Ссылка для возврата на предыдущую страницу -->
+    <a href="javascript:history.back()" class="back-link">&larr; Вернуться к списку техник</a>
+</div>
+{% endblock %}

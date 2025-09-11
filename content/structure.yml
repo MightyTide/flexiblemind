@@ -1,0 +1,50 @@
+pains:
+  - id: verdikt
+    title: "Окончательный вердикт"
+    subtitle: "Вы выносите приговор себе, другим или миру?"
+    icon: "static/img/icon-molotok.svg" # Пути к иконкам теперь правильные
+    techniques:
+      - svidetel-ne-sudya
+      - razdelenie-namereniy
+      - poisk-isklucheniy
+      - shkala-serogo
+
+  - id: katastrofa
+    title: "Катастрофа"
+    subtitle: "Одно событие кажется вам концом света?"
+    icon: "static/img/icon-vulkan.svg"
+    techniques:
+      - mashina-vremeni
+      - vzglyad-s-orbity
+      - konstruktor-realnostey
+      - poisk-sokrovish
+
+  - id: vsyo-ili-nichego
+    title: "Всё или Ничего"
+    subtitle: 'Вы мыслите в категориях «всегда», «никогда», «все», «никто»?'
+    icon: "static/img/icon-yin-yang.svg"
+    techniques:
+      - poisk-isklucheniy
+      - shkala-serogo
+      - narezka-salyami
+      - svidetel-ne-sudya
+
+  - id: nepreodolimaya-stena
+    title: "Непреодолимая Стена"
+    subtitle: "Задача кажется вам настолько большой, что вы не знаете, с чего начать?"
+    icon: "static/img/icon-stena.svg"
+    techniques:
+      - narezka-salyami
+      - vzglyad-s-vershiny
+      - mashina-vremeni
+      - razdelenie-namereniy
+
+  - id: zheleznaya-logika
+    title: "Железная Логика"
+    subtitle: "Вы уверены, что одно событие жестко означает другое?"
+    icon: "static/img/icon-shesterni.svg"
+    techniques:
+      - konstruktor-realnostey
+      - smena-operatora
+      - razdelenie-namereniy
+      - poisk-isklucheniy

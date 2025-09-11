@@ -1,0 +1,23 @@
+<!-- Наследуем базовый шаблон -->
+{% extends "base.html" %}
+
+<!-- Вставляем контент в блок 'content' -->
+{% block content %}
+<div class="welcome-message">
+    <p>Это не аптечка. Это — спортзал для вашего ума. Мышление — это навык. Гибкий и сильный ум, способный смотреть на мир с разных углов, — результат регулярных тренировок. Выберите тему, с которой хотите поработать, и соответствующий тренажер.</p>
+</div>
+
+<div class="pain-grid">
+    <!-- Проходимся циклом по всем 'болям' из файла structure.yml -->
+    {% for pain in pains %}
+    <a href="/{{ pain.id }}/" class="pain-card">
+        <div class="pain-icon">
+            <img src="/{{ pain.icon }}" alt="">
+        </div>
+        <h2>{{ pain.title }}</h2>
+        <p>{{ pain.subtitle }}</p>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}```
+

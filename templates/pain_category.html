@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="category-header">
+    <h1>Инструменты против «{{ pain.title }}»</h1>
+    <p>{{ pain.subtitle }}</p>
+    <a href="/" class="back-link">&larr; Вернуться к выбору</a>
+</div>
+
+<!-- ЗАМЕНЯЕМ СТАРЫЙ technique-list НА НОВЫЙ pain-grid -->
+<div class="pain-grid">
+    {% for technique in techniques %}
+    <!-- Используем ту же структуру карточки, что и на главной -->
+    <a href="/techniques/{{ technique.id }}/" class="pain-card">
+        <!-- ДОБАВЛЯЕМ БЛОК С ИКОНКОЙ ТЕХНИКИ -->
+        <div class="pain-icon">
+            <img src="/{{ technique.icon }}" alt="">
+        </div>
+        <h2>{{ technique.title }}</h2>
+        <p>{{ technique.subtitle }}</p>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
