@@ -23,11 +23,80 @@ body {
     padding: 0 20px;
 }
 
+/* --- Стили для шапки (Финальная версия) --- */
+
+/* Контейнер внутри шапки */
 .header-container {
     display: flex;
+    /* Используем flexbox */
     justify-content: space-between;
+    /* Разносим лого и кнопки */
     align-items: center;
+    /* Выравниваем по вертикали */
     width: 100%;
+    gap: 15px;
+    /* Добавляем базовый отступ между лого и кнопками */
+}
+
+/* Логотип */
+header .logo {
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+    /* ВАЖНО: Правила для сжатия */
+    flex-shrink: 1;
+    /* Разрешаем логотипу сжиматься, если нужно */
+    white-space: nowrap;
+    /* Но запрещаем перенос на новую строку */
+    overflow: hidden;
+    /* Обрезаем текст, если он не влезает */
+    text-overflow: ellipsis;
+    /* ...и ставим многоточие */
+}
+
+/* Контейнер для кнопок */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    /* ВАЖНО: Правило, запрещающее сжатие */
+    flex-shrink: 0;
+    /* Запрещаем этому блоку сжиматься */
+}
+
+/* Кнопки */
+.feedback-button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    line-height: 1;
+    flex-shrink: 0;
+    /* Запрещаем и самим кнопкам сжиматься */
+}
+
+.feedback-button:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+.help-button-header {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Шапка и подвал */
@@ -46,16 +115,6 @@ header {
     box-shadow: var(--box-shadow);
 }
 
-
-header .logo {
-    font-family: 'Fredoka One', cursive;
-    /* <<< ВОТ ОНА */
-    color: white;
-    text-decoration: none;
-    font-size: 2.2em;
-    font-weight: normal;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
 
 footer {
     text-align: center;
@@ -263,44 +322,6 @@ footer {
     }
 }
 
-.feedback-button {
-    background: none;
-    border: 2px solid white;
-    color: white;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    /* Убираем лишние отступы */
-    line-height: 1;
-    /* Улучшаем вертикальное центрирование символов */
-}
-
-.feedback-button:hover {
-    background-color: white;
-    color: var(--secondary-color);
-}
-
-.header-actions {
-    display: flex;
-    /* Располагаем кнопки в ряд */
-    align-items: center;
-    gap: 15px;
-    /* Добавляем отступ между кнопками */
-}
-
-/* Специальный стиль для кнопки помощи, чтобы она была заметнее */
-.help-button-header {
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.2);
-    /* Делаем ее полупрозрачной */
-}
 
 /* Стили для модального окна */
 .modal-overlay {
