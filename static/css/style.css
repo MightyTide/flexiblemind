@@ -81,7 +81,7 @@ header .logo {
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    font-size: 18px;
+    font-size: 19px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
     display: flex;
@@ -99,7 +99,7 @@ header .logo {
 }
 
 .help-button-header {
-    font-weight: bold;
+    font-weight: normal;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -195,12 +195,19 @@ footer {
 
 /* Стили для страниц категорий и техник */
 .category-header,
+
 .technique-content {
     background-color: var(--card-background);
     padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     margin-bottom: 30px;
+    text-align: left;
+}
+
+.category-header h1 {
+    text-align: center;
+    /* <<< ВОТ ЭТА СТРОЧКА */
 }
 
 .technique-card:hover {
@@ -245,6 +252,27 @@ footer {
     line-height: 1.4;
 }
 
+/* --- Точечная настройка межстрочных интервалов --- */
+
+/* Для приветственного текста на главной */
+.welcome-message p {
+    line-height: 1.45;
+    /* Чуть плотнее, чем базовый */
+}
+
+/* Для описания боли на странице категории */
+.category-header p {
+    line-height: 1.45;
+}
+
+/* Для подвала (footer) */
+footer p {
+    line-height: 0.8;
+    /* Еще плотнее для коротких строк */
+    color: #7f8c8d;
+    /* Перенесем цвет сюда для надежности */
+}
+
 /* --- АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ --- */
 /* Все стили внутри этого блока будут применяться ТОЛЬКО на экранах шириной 620px или меньше */
 @media (max-width: 620px) {
@@ -256,7 +284,6 @@ footer {
     }
 
     header .logo {
-        font-size: 1.6em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -386,4 +413,10 @@ footer {
     cursor: pointer;
     width: 100%;
     font-size: 16px;
+}
+
+.feedback-button img {
+    width: 19px;
+    /* Подберите идеальный размер */
+    height: 19px;
 }

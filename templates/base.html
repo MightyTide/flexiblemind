@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title | default('Не отвлекайся от главного') }}</title>
+    <title>{{ title | default('flexible') }}</title>
     <!-- Путь к CSS теперь относительный, что более правильно -->
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,9 @@
             <a href="/" class="logo">flexible:mind</a>
             <div class="header-actions">
                 <button id="help-btn" class="feedback-button help-button-header">?</button>
-                <button id="feedback-btn" class="feedback-button">&#9993;</button>
+                <button id="feedback-btn" class="feedback-button">
+                    <img src="/static/img/icon-feedback.svg" alt="Обратная связь">
+                </button>
             </div>
         </div>
     </header>
@@ -63,7 +65,7 @@
             <p>Подберите тренажер: Вам будет предложен набор техник-упражнений.</p>
             <p>Сделайте упражнение: Каждая техника — это короткая, пошаговая инструкция. Попробуйте применить ее к своей
                 ситуации прямо сейчас. Не получилось с одной? Попробуйте другую. Цель — найти тот угол зрения, который
-                даст вам ощущение ясности и откроет новые возможности.</p>
+                даст вам конструктивную перспективу в вашей ситуации и откроет новые возможности.</p>
             <p>Регулярная тренировка этих навыков поможет вам не просто решать текущие проблемы, но и научит ваш ум не
                 попадать в такие тупики в будущем, а также лучше распознавать и противостоять психологическим
                 манипуляциям.</p>
